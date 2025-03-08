@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Números</h1>
+        <label for="numberInput">Número:</label>
+        <input type="text" id="numberInput" placeholder="Ingrese el número">
+        
+        <label for="baseSelect">Base de origen:</label>
+        <select id="baseSelect">
+            <option value="2">Binario</option>
+            <option value="8">Octal</option>
+            <option value="10" selected>Decimal</option>
+            <option value="16">Hexadecimal</option>
+        </select>
+        
+        <button id="convertButton">Convertir</button>
+        
+        <div id="consoleOutput"></div>
+    </div>
+    <p class="author">By: Jorge Andres Vasquez Hernandez</p>
+    <script src="main.js"></script>
+</body>
+</html>
+
