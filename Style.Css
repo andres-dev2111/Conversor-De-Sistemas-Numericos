@@ -20,14 +20,18 @@ body {
     box-shadow: 0 0 15px rgba(255, 165, 0, 0.5);
     text-align: center;
     backdrop-filter: blur(10px);
-    width: 90%;
-    max-width: 400px;
+    width: 400px;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 input, select, button {
     margin: 10px 0;
     padding: 12px;
-    width: calc(100% - 24px);
+    width: 100%;
     font-size: 1rem;
     border-radius: 5px;
     border: none;
@@ -35,6 +39,7 @@ input, select, button {
     color: #f8f8f2;
     outline: none;
     transition: all 0.3s;
+    box-sizing: border-box;
 }
 
 input:focus, select:focus {
@@ -45,10 +50,11 @@ select {
     appearance: none;
     background: #ff8c00;
     color: #1e1e2f;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    width: 100%;
 }
 
 select:hover {
@@ -73,8 +79,12 @@ button:hover {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     font-family: monospace;
-    text-align: left;
+    text-align: center;
+    width: 100%;
+    min-height: 50px;
     border: 1px solid rgba(255, 165, 0, 0.5);
+    overflow: hidden;
+    white-space: pre-wrap;
 }
 
 .result {
