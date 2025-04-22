@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sistemas Digitales</title>
+    <link rel="stylesheet" href="./home.css" />
+    <link rel="icon" href="./icono.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <span>SD</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#compuertas-logicas">Compuertas Logicas</a></li>
+            <li><a href="#conversiones">Conversiones</a></li>
+            <li><a href="#leyes-circuitos">Leyes de Boole</a></li>
+            <li><a href="./calculadora.html">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1><span class="highlight">Sistemas Digitales</span></h1>
+            <p>La mejor información sobre electrónica, informática y herramientas online.</p>
+            <a href="#conversiones" class="hero-btn">Explorar</a>
+        </div>
+    </header>
+    
+    <section id="conversiones" class="conversiones">
+        <h2>Procesos de Conversión Numérica</h2>
+    
+        <div class="conversion-card">
+            <h3> Decimal a otras bases</h3>
+            <p><strong>Procedimiento:</strong> Divide el número decimal entre la base destino (2, 8 o 16), guarda el residuo y repite con el cociente hasta llegar a 0. El resultado es la secuencia de residuos leída en orden inverso.</p>
+            <p><strong>Ejemplo (Decimal 25 a Binario):</strong></p>
+            <pre>
+    25 ÷ 2 = 12 → residuo 1  
+    12 ÷ 2 = 6  → residuo 0  
+    6 ÷ 2 = 3   → residuo 0  
+    3 ÷ 2 = 1   → residuo 1  
+    1 ÷ 2 = 0   → residuo 1
+    
+    Resultado: 11001
+            </pre>
+        </div>
+    
+        <div class="conversion-card">
+            <h3> Binario a Decimal</h3>
+            <p><strong>Procedimiento:</strong> Multiplica cada bit por 2 elevado a su posición (de derecha a izquierda, empezando en 0), y suma los resultados.</p>
+            <p><strong>Ejemplo (Binario 1011):</strong></p>
+            <pre>
+                (1 × 2³) + (0 × 2²) + (1 × 2¹) + (1 × 2⁰)= 8 + 0 + 2 + 1 = 11
+            </pre>
+        </div>
+    
+        <div class="conversion-card">
+            <h3> Octal a Decimal</h3>
+            <p><strong>Procedimiento:</strong> Multiplica cada dígito por 8 elevado a su posición (de derecha a izquierda, desde 0) y suma.</p>
+            <p><strong>Ejemplo (Octal 157):</strong></p>
+            <pre>
+                (1 × 8²) + (5 × 8¹) + (7 × 8⁰)
+                 = 64 + 40 + 7 = 111
+            </pre>
+        </div>
+    
+        <div class="conversion-card">
+            <h3> Hexadecimal a Decimal</h3>
+            <p><strong>Procedimiento:</strong> Convierte cada carácter (A-F) a su valor decimal, luego multiplica por 16 elevado a su posición (de derecha a izquierda) y suma.</p>
+            <p><strong>Ejemplo (Hexadecimal 2F):</strong></p>
+            <pre>
+                (2 × 16¹) + (15 × 16⁰) → F = 15  
+                = 32 + 15 = 47
+            </pre>
+        </div>
+    
+        <div class="conversion-card">
+            <h3> Entre sistemas no decimales</h3>
+            <p><strong>Procedimiento:</strong> Primero convierte el número a decimal, luego del decimal a la base deseada.</p>
+            <p><strong>Ejemplo (Binario 1101 a Hexadecimal):</strong></p>
+            <pre>
+                Paso 1: Binario 1101 → Decimal = 13  
+                Paso 2: Decimal 13 → Hexadecimal = D
+            </pre>
+        </div>
+    </section>
+    <section id="compuertas-logicas" class="section-compuertas" class="section-logica compuertas-section">
+  <h2>Compuertas Lógicas</h2>
+  <p>Las compuertas lógicas son los bloques fundamentales de los circuitos digitales. A continuación, se presentan las principales:</p>
+
+  <div class="compuertas-grid">
+    <div class="compuerta">
+     <img src="/assets/AND.png" alt="Compuerta AND">
+      <h4>AND</h4>
+      <p>Devuelve 1 solo si ambas entradas son 1.</p>
+    </div>
+    <div class="compuerta">
+        <img src="/assets/OR.png" alt="Compuerta OR">
+      <h4>OR</h4>
+      <p>Devuelve 1 si al menos una entrada es 1.</p>
+    </div>
+    <div class="compuerta">
+      <img src="/assets/NOT.png" alt="Compuerta NOT">
+      <h4>NOT</h4>
+      <p>Invierte el valor de entrada.</p>
+    </div>
+    <div class="compuerta">
+       <img src="/assets/NAND.png" alt="Compuerta NAND">
+      <h4>NAND</h4>
+      <p>Negación de AND. Devuelve 0 solo si ambas entradas son 1.</p>
+    </div>
+    <div class="compuerta">
+      <img src="assets/NOR.png" alt="Compuerta NOR">
+      <h4>NOR</h4>
+      <p>Negación de OR. Devuelve 1 solo si ambas entradas son 0.</p>
+    </div>
+    <div class="compuerta">
+        <img src="/assets/XOR.png" alt="Compuerta XOR">
+      <h4>XOR</h4>
+      <p>Devuelve 1 si las entradas son diferentes.</p>
+    </div>
+    <div class="compuerta">
+        <img src="/assets/XNOR.png" alt="Compuerta XNOR">
+      <h4>XNOR</h4>
+      <p>Devuelve 1 si las entradas son iguales.</p>
+    </div>
+  </div>
+</section>
+<section id="leyes-circuitos" class="section-logica">
+    <div class="logica-container">
+      <h2>Leyes de Boole y Circuitos Lógicos</h2>
+      <p class="intro">
+        Las leyes del álgebra de Boole son fundamentales para el diseño, análisis y optimización de circuitos digitales.
+      </p>
+  
+      <div class="subseccion">
+        <h3>Leyes Fundamentales</h3>
+        <ul class="leyes-boole">
+          <li><strong>Identidad:</strong> A + 0 = A, A · 1 = A</li>
+          <li><strong>Dominación:</strong> A + 1 = 1, A · 0 = 0</li>
+          <li><strong>Idempotencia:</strong> A + A = A</li>
+          <li><strong>Complemento:</strong> A + A' = 1, A · A' = 0</li>
+          <li><strong>Distributiva:</strong> A · (B + C) = AB + AC</li>
+          <li><strong>De Morgan:</strong> (AB)' = A' + B', (A + B)' = A' · B'</li>
+        </ul>
+      </div>
+  
+      <div class="subseccion">
+        <h3>Expresiones y Circuitos</h3>
+        <p><strong>Ejemplo:</strong> Y = A · B + C</p>
+        <p>Este tipo de expresión define el comportamiento lógico que puede implementarse con compuertas AND y OR. La optimización de expresiones ayuda a simplificar el circuito y reducir costos.</p>
+      </div>
+  
+      <div class="subseccion">
+        <h3>Herramientas de Simplificación</h3>
+        <ul>
+          <li>Álgebra Booleana</li>
+          <li>Mapas de Karnaugh</li>
+          <li>Diagramas Lógicos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+    
+    <footer class="footer">
+        <p>&copy; 2025 Jorge Andres Vasquez Hernandez</p>
+    </footer>
+</body>
+</html>
